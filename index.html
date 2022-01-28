@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/root.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- TITLE -->
+    <title>Krishandeep</title>
+  </head>
+
+  <body>
+    <!-- PRE LOADER -->
+    <div class="pre-loader">
+      <div class="loading">
+        <div></div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header header-transparent">
+      <nav class="navbar">
+        <a href="#home">
+          <img class="logo" src="img/kd-logo.png" alt="KD" />
+        </a>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skill" class="nav-link">Skill</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <a
+              href="resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-btn"
+              title="Resume"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- HERO SECTION -->
+      <section class="hero-section" id="home">
+        <div class="hero-container">
+          <h1>Krishan<span style="color: var(--primary-color)">deep</span></h1>
+          <p>I'm Full-Stack Web Developer</p>
+
+          <a href="#about" class="scroll-down-btn" title="Scroll Down">
+            To Know More
+            <i class="down-arrow fas fa-long-arrow-alt-down"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="about-section" id="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>About <span style="color: #ffb727">Me</span></h2>
+            <p>Who I am</p>
+          </div>
+          <div class="about">
+            <div
+              class="about-img-box"
+              role="img"
+              aria-label="Profile Pic"
+            ></div>
+            <div class="about-text-box">
+              <h3>Hi, thanks for visiting my site.</h3>
+              <p class="about-text">
+                With over a decade of development experience in a number of
+                industries I realized that the typical product creation process
+                between clients and developers was flawed. All too often
+                developers rarely communicate to clients throughout the
+                development stage, resulting in a final product that fails to
+                reach the goal sought by the customer and end user.
+              </p>
+              <p class="about-text">
+                For this reason I decided to utilize a completely different
+                development pattern that focuses on highly focused communication
+                and transparent design patterns. When I take on a project not
+                only do I work to craft the application according to the
+                client's specifications, I give daily updates to ensure that the
+                project is aligning properly with the client's goals. The end
+                result is the right product, delivered on time, and on budget.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILL SECTION -->
+      <section class="skill-section" id="skill">
+        <div class="container">
+          <div class="section-title">
+            <h2>My <span style="color: #ffb727">Skills</span></h2>
+            <p>Here all the stuff I do</p>
+          </div>
+        </div>
+
+        <div class="container grid grid--3-cols skill-row">
+          <div class="skill-col">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+              <h4 class="skill-title">Front End</h4>
+              <ul class="skills-list">
+                <li><i class="fas fa-check"></i> <span>HTML</span></li>
+                <li><i class="fas fa-check"></i> <span>CSS</span></li>
+
+                <li><i class="fas fa-check"></i> <span>JavaScript</span></li>
+
+                <li><i class="fas fa-check"></i> <span>React</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-col">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <h4 class="skill-title">Back End</h4>
+              <ul class="skills-list">
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Node.js</span>
+                </li>
+                <li><i class="fas fa-check"></i> <span>Express.js</span></li>
+                <li><i class="fas fa-check"></i> <span>RESTful API</span></li>
+                <li><i class="fas fa-check"></i> <span>MongoDB</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-col">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+              <h4 class="skill-title">Others</h4>
+              <ul class="skills-list">
+                <li><i class="fas fa-check"></i> <span>Bootstrap</span></li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>DOM with vanilla JS</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Command Line Interface</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Responsive Web Design</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK SECTION -->
+      <section class="work-section" id="work">
+        <div class="container">
+          <div class="section-title">
+            <h2>My <span style="color: #ffb727">Work</span></h2>
+            <p>Here's some stuff I made recently</p>
+          </div>
+        </div>
+
+        <div class="container work-btn-container">
+          <button type="button" class="filter-btn filter-active" data-id="all">
+            all
+          </button>
+          <button type="button" class="filter-btn" data-id="nodejs">
+            nodejs
+          </button>
+          <button type="button" class="filter-btn" data-id="react">
+            react
+          </button>
+          <button type="button" class="filter-btn" data-id="javascript">
+            javascript
+          </button>
+          <button type="button" class="filter-btn" data-id="css">
+            <span>HTML/CSS</span>
+          </button>
+        </div>
+
+        <div class="container grid grid--3-cols">
+          <div class="project">
+            <img class="project-img" src="img/project-img.png" alt="" />
+
+            <div class="project-content">
+              <h3 class="project--title">Joke Teller AI</h3>
+
+              <div class="project-tag">
+                <span class="tag tag--html">HTML</span>
+                <span class="tag tag--css">CSS</span>
+                <span class="tag tag--js">JavaScript</span>
+              </div>
+            </div>
+            <div class="overlay">
+              <div class="project-intro">
+                <h3 class="project--title">Joke Teller AI</h3>
+                <p class="project--description">
+                  In this project, I'm going to call a joke API to get a random
+                  joke and then I'm gonna pass that to a text to speech API and
+                  it will tell that joke.
+                </p>
+                <div class="project-links-wrapper">
+                  <a
+                    href="http://"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link link-outline"
+                    title="See Live"
+                  >
+                    See Live <i class="fas fa-external-link-alt icon"></i>
+                  </a>
+                  <a
+                    href="http://"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link"
+                    title="Source Code"
+                  >
+                    Source Code <i class="fab fa-github icon"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img class="project-img" src="img/project-img.png" alt="" />
+
+            <div class="project-content">
+              <h3 class="project--title">Joke Teller AI</h3>
+
+              <div class="project-tag">
+                <span class="tag tag--html">HTML</span>
+                <span class="tag tag--css">CSS</span>
+                <span class="tag tag--js">JavaScript</span>
+              </div>
+            </div>
+            <div class="overlay">
+              <div class="project-intro">
+                <h3 class="project--title">Joke Teller AI</h3>
+                <p class="project--description">
+                  In this project, I'm going to call a joke API to get a random
+                  joke and then I'm gonna pass that to a text to speech API and
+                  it will tell that joke.
+                </p>
+                <div class="project-links-wrapper">
+                  <a
+                    href="http://"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link link-outline"
+                  >
+                    See Live <i class="fas fa-external-link-alt icon"></i>
+                  </a>
+                  <a
+                    href="http://"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link"
+                  >
+                    Source Code <i class="fab fa-github icon"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img class="project-img" src="img/project-img.png" alt="" />
+
+            <div class="project-content">
+              <h3 class="project--title">Joke Teller AI</h3>
+
+              <div class="project-tag">
+                <span class="tag tag--html">HTML</span>
+                <span class="tag tag--css">CSS</span>
+                <span class="tag tag--js">JavaScript</span>
+              </div>
+            </div>
+            <div class="overlay">
+              <div class="project-intro">
+                <h3 class="project--title">Joke Teller AI</h3>
+                <p class="project--description">
+                  In this project, I'm going to call a joke API to get a random
+                  joke and then I'm gonna pass that to a text to speech API and
+                  it will tell that joke.
+                </p>
+                <div class="project-links-wrapper">
+                  <a
+                    href="http://"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link link-outline"
+                  >
+                    See Live <i class="fas fa-external-link-alt icon"></i>
+                  </a>
+                  <a
+                    href="http://"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link"
+                  >
+                    Source Code <i class="fab fa-github icon"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img class="project-img" src="img/project-img.png" alt="" />
+
+            <div class="project-content">
+              <h3 class="project--title">Joke Teller AI</h3>
+
+              <div class="project-tag">
+                <span class="tag tag--html">HTML</span>
+                <span class="tag tag--css">CSS</span>
+                <span class="tag tag--js">JavaScript</span>
+              </div>
+            </div>
+            <div class="overlay">
+              <div class="project-intro">
+                <h3 class="project--title">Joke Teller AI</h3>
+                <p class="project--description">
+                  In this project, I'm going to call a joke API to get a random
+                  joke and then I'm gonna pass that to a text to speech API and
+                  it will tell that joke.
+                </p>
+                <div class="project-links-wrapper">
+                  <a
+                    href="http://"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link link-outline"
+                  >
+                    See Live <i class="fas fa-external-link-alt icon"></i>
+                  </a>
+                  <a
+                    href="http://"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link"
+                  >
+                    Source Code <i class="fab fa-github icon"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Contact <span style="color: #ffb727">Me</span></h2>
+            <p>Have me make stuff for you</p>
+          </div>
+        </div>
+
+        <div class="container grid grid--2-cols align-items-center">
+          <div class="contact-info">
+            <h4>Get in Touch</h4>
+            <div class="info">
+              <div class="icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="text">
+                <h5>Home:</h5>
+                <a
+                  href="http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Home"
+                >
+                  Bijwasan, New Delhi, India
+                </a>
+              </div>
+            </div>
+            <div class="info">
+              <div class="icon">
+                <i class="far fa-envelope"></i>
+              </div>
+              <div class="text">
+                <h5>Email:</h5>
+                <a
+                  href="mailto:krishandeep17@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Email"
+                >
+                  krishandeep17@gmail.com
+                </a>
+              </div>
+            </div>
+            <div class="info">
+              <div class="icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div class="text">
+                <h5>Call:</h5>
+                <a
+                  href="tel:+919560134360"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Call"
+                >
+                  +919560134360
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-col">
+            <!-- Form -->
+            <form class="contact-form" id="form">
+              <h4>Send Message</h4>
+              <!-- Full Name -->
+              <div class="input-box">
+                <input
+                  type="text"
+                  name="Name"
+                  id="name"
+                  minlength="3"
+                  maxlength="30"
+                  pattern="[A-Za-z\s]+"
+                  required
+                />
+                <label for="name">Full Name</label>
+                <span>
+                  <i class="fas fa-check check-icon"></i>
+                  <i class="fas fa-times cross-icon"></i>
+                </span>
+              </div>
+
+              <!-- Email Address -->
+              <div class="input-box">
+                <input
+                  type="email"
+                  name="Email"
+                  id="email"
+                  pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+                  required
+                />
+                <label for="email">Email Address</label>
+                <span>
+                  <i class="fas fa-check check-icon"></i>
+                  <i class="fas fa-times cross-icon"></i>
+                </span>
+              </div>
+
+              <!-- Message -->
+              <div class="input-box">
+                <textarea
+                  name="Message"
+                  id="message"
+                  rows="3"
+                  minlength="3"
+                  maxlength="1000"
+                  required
+                ></textarea>
+                <label for="message">Message</label>
+                <span>
+                  <i class="fas fa-check check-icon"></i>
+                  <i class="fas fa-times cross-icon"></i>
+                </span>
+              </div>
+
+              <button type="submit" class="form-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="container">
+        <h3>Krishandeep</h3>
+        <p>
+          Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni
+          eligendi fuga maxime saepe commodi placeat.
+        </p>
+        <div class="social-links">
+          <a
+            href="http://"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Github"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="http://"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="http://"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Twitter"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="http://"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Linked In"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="http://"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Codepen"
+          >
+            <i class="fab fa-codepen"></i>
+          </a>
+        </div>
+        <div class="copyright">
+          Copyright &copy; <span class="year"></span> by
+          <span style="color: var(--primary-color)">Krishandeep</span>,<br />
+          Inc. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- BACK-TO-TOP -->
+    <a href="#home" class="back-to-top" title="Back To Top">
+      <i class="top-arrow fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Send email from Javascript -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- CUSTOM JAVASCRIPT -->
+    <script src="js/sendEmail.js"></script>
+    <script src="js/contactForm.js"></script>
+    <!-- <script src="js/projects.js"></script> -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

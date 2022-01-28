@@ -1,0 +1,42 @@
+/***********************/
+/* CSS VARIABLES */
+/***********************/
+
+:root {
+  --primary-color: #ffb727;
+  --on-hover-primary-color: #ffc85a;
+  --primary-light-color: #ffc550;
+  --primary-shade-color: #fff6e4;
+  --primary-dark-color: #f3a200;
+
+  --error-color: #ff3333;
+  --success-color: #4bb543;
+
+  --secondary-color: #444;
+
+  --primary-text: #3b434a;
+  --secondary-text: #777;
+  --social-icon-color: #687683;
+
+  --tertiary-text: #a6a6a6;
+  --primary-font: "Open Sans", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+  --tertiary-font: "Poppins", sans-serif;
+
+  --box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+/* 
+#264653
+#2A9D8F
+#E9C46A
+#F4A261
+#E76F51
+*/
+
+
+
+
+
+
+

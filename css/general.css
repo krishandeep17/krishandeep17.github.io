@@ -1,0 +1,137 @@
+/***********************/
+/* RESET CSS */
+/***********************/
+
+* {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+  /* box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5); */
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* Does not work on Safari and Microsoft Edge */
+  scroll-behavior: smooth;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+body {
+  color: var(--secondary-color);
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/***********************/
+/* GENERAL CSS */
+/***********************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--secondary-font);
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  /* column-gap: 6.4rem; */
+  /* row-gap: 9.6rem; */
+
+  gap: 6.4rem;
+
+  /* margin-bottom: 9.6rem; */
+}
+
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+section {
+  padding: 8rem 0;
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.section-title h2 {
+  color: var(--primary-text);
+  font-size: 4.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 4rem;
+  height: 0.3rem;
+  background: var(--primary-color);
+  bottom: 0;
+  left: calc(50% - 2rem);
+}
