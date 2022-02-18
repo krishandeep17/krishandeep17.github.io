@@ -1,5 +1,8 @@
 // Selecting DOM
 
+var mykey = config.MY_KEY;
+var secretkey = config.SECRET_KEY;
+
 const html = document.documentElement;
 
 const preLoader = document.querySelector(".pre-loader");
