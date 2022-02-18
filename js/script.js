@@ -3,6 +3,9 @@
 var mykey = config.MY_KEY;
 var secretkey = config.SECRET_KEY;
 
+console.log(mykey);
+console.log(secretkey);
+
 const html = document.documentElement;
 
 const preLoader = document.querySelector(".pre-loader");
