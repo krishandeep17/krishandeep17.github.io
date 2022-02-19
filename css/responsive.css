@@ -23,18 +23,17 @@
   .header {
     padding: 0 3.2rem;
   }
-  .main-nav-list {
-    gap: 3.2rem;
+  .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
   }
-  .about-inner {
-    gap: 4.8rem;
+  .about-inner .about-text-box {
+    margin-right: 4.8rem;
   }
-  .project {
-    gap: 4.8rem;
-    margin-bottom: 6.4rem;
+  .project .project-text-box {
+    margin-right: 4.8rem;
   }
-  .contact-inner {
-    gap: 4.8rem;
+  .contact-inner .contact-form-box {
+    margin-right: 4.8rem;
   }
   .btn,
   .btn:link,
@@ -92,16 +91,29 @@
   .about-inner {
     flex-direction: column;
   }
-  .project {
-    flex-direction: column-reverse;
+  .about-inner .about-text-box {
+    margin-right: 0;
     margin-bottom: 4.8rem;
   }
-  .project-text-box {
+  .section-project h2 {
     margin-bottom: 4.8rem;
+  }
+  .project {
+    flex-direction: column-reverse;
+  }
+  .project .project-img-box {
+    margin-bottom: 3.2rem;
+  }
+  .project .project-text-box {
+    margin-right: 0;
     align-self: flex-start;
   }
   .contact-inner {
     flex-direction: column;
+  }
+  .contact-inner .contact-form-box {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
   }
   .contact-form .half {
     width: 49%;
@@ -167,7 +179,10 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 4.8rem;
+  }
+  .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
   }
   .main-nav-link:link,
   .main-nav-link:visited {
@@ -203,55 +218,95 @@
 }
 
 /**************************/
-/* Fixing Safari flexbox gap */
+/* Fixing Flexbox Gap */
 /**************************/
-/* .no-flexbox-gap .main-nav-list li:not(:last-child) {
-  margin-right: 4.8rem;
-}
-.no-flexbox-gap .about-inner div:not(:last-child) {
-  margin-right: 6.4rem;
-}
-.no-flexbox-gap .projects div:not(:last-child) {
-  margin-right: 6.4rem;
-}
-.no-flexbox-gap .links a:not(:last-child) {
-  margin-right: 1.6rem;
-}
-.no-flexbox-gap .contact-inner div:not(:last-child) {
-  margin-right: 6.4rem;
-}
-.no-flexbox-gap .social-links li:not(:last-child) {
-  margin-right: 2.4rem;
-}
-@media (max-width: 75em) {
-  .no-flexbox-gap .main-nav-list li:not(:last-child) {
-    margin-right: 3.2rem;
+
+@supports (gap: 4.8rem) {
+  .main-nav-list {
+    gap: 4.8rem;
   }
-  .no-flexbox-gap .about-inner div:not(:last-child) {
-    margin-right: 4.8rem;
-  }
-  .no-flexbox-gap .projects div:not(:last-child) {
-    margin-right: 4.8rem;
-  }
-  .no-flexbox-gap .contact-inner div:not(:last-child) {
-    margin-right: 4.8rem;
-  }
-}
-@media (max-width: 48em) {
-  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+  .main-nav-list li:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 4.8rem;
   }
-  .no-flexbox-gap .about-inner div:not(:last-child) {
+  .about-inner {
+    gap: 6.4rem;
+  }
+  .about-inner .about-text-box {
     margin-right: 0;
-    margin-bottom: 4.8rem;
   }
-  .no-flexbox-gap .projects div:not(:last-child) {
+  .project {
+    gap: 6.4rem;
+  }
+  .project .project-text-box {
     margin-right: 0;
-    margin-bottom: 4.8rem;
   }
-  .no-flexbox-gap .contact-inner div:not(:last-child) {
+  .project-text-box .links {
+    gap: 1.6rem;
+  }
+  .project-text-box .links a:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 4.8rem;
   }
-} */
+  .contact-inner {
+    gap: 6.4rem;
+  }
+  .contact-inner .contact-form-box {
+    margin-right: 0;
+  }
+  .social-links {
+    gap: 2.4rem;
+  }
+  .social-links li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  @media (max-width: 75em) {
+    .main-nav-list {
+      gap: 3.2rem;
+    }
+    .main-nav-list li:not(:last-child) {
+      margin-right: 0;
+    }
+    .about-inner {
+      gap: 4.8rem;
+    }
+    .about-inner .about-text-box {
+      margin-right: 0;
+    }
+    .project {
+      gap: 4.8rem;
+    }
+    .project .project-text-box {
+      margin-right: 0;
+    }
+    .contact-inner {
+      gap: 4.8rem;
+    }
+    .contact-inner .contact-form-box {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 48em) {
+    .project {
+      gap: 3.2rem;
+    }
+    .about-inner .about-text-box {
+      margin-bottom: 0;
+    }
+    .project .project-img-box {
+      margin-bottom: 0;
+    }
+    .contact-inner .contact-form-box {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 34em) {
+    .main-nav-list {
+      gap: 4.8rem;
+    }
+    .main-nav-list li:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}

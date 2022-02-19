@@ -82,6 +82,8 @@ h3 {
 }
 p {
   margin-bottom: 1.6rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 section {
   min-height: 100vh;
@@ -252,8 +254,8 @@ section {
 /* NAVIGATION */
 /***********************/
 
-.main-nav-list {
-  gap: 4.8rem;
+.main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
 }
 
 .main-nav-link:link,
@@ -349,15 +351,12 @@ section {
 /* ABOUT SECTION */
 /***********************/
 
-.about-inner {
-  gap: 6.4rem;
-}
-
-.about-text-box {
+.about-inner .about-text-box {
+  margin-right: 6.4rem;
   flex: 3;
 }
 
-.about-img-box {
+.about-inner .about-img-box {
   flex: 2;
 }
 
@@ -419,16 +418,20 @@ section {
 /***********************/
 
 .project {
-  gap: 6.4rem;
   margin-bottom: 9.6rem;
 }
 
-.project div {
+.project .project-text-box {
+  margin-right: 6.4rem;
+}
+
+.project .project-text-box,
+.project .project-img-box {
   flex: 1;
 }
 
-.project-text-box .links {
-  gap: 1.6rem;
+.project-text-box .links a:not(:last-child) {
+  margin-right: 1.6rem;
 }
 
 .project-text-box .links .btn {
@@ -450,11 +453,12 @@ section {
 /* CONTACT SECTION */
 /***********************/
 
-.contact-inner {
-  gap: 6.4rem;
+.contact-inner .contact-form-box {
+  margin-right: 6.4rem;
 }
 
-.contact-inner div {
+.contact-inner .contact-form-box,
+.contact-inner .contact-img-box {
   flex: 1;
 }
 
@@ -541,8 +545,11 @@ section {
 }
 
 .social-links {
-  gap: 2.4rem;
   margin-bottom: 3.2rem;
+}
+
+.social-links li:not(:last-child) {
+  margin-right: 2.4rem;
 }
 
 .social-links a:link,
