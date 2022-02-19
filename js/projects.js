@@ -1,123 +1,104 @@
-const menu = [
+const projects = [
   {
     id: 1,
-    title: "buttermilk pancakes",
-    category: "breakfast",
-    price: 15.99,
-    img: "./images/item-1.jpeg",
-    desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+    title: "Animated Navbar",
+    live: "https://krishandeep.com/animated-navbar",
+    github: "https://github.com/krishandeep7/animated-navbar",
+    img: "img/animated-navbar-img.png",
+    description:
+      "It is a responsive navigation bar with advanced CSS animation and animated menu icon.",
   },
   {
     id: 2,
-    title: "diner double",
-    category: "lunch",
-    price: 13.99,
-    img: "./images/item-2.jpeg",
-    desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
+    title: "Animated Navbar",
+    live: "https://krishandeep.com/animated-navbar",
+    github: "https://github.com/krishandeep7/animated-navbar",
+    img: "img/animated-navbar-img.png",
+    description:
+      "It is a responsive navigation bar with advanced CSS animation and animated menu icon.",
   },
   {
     id: 3,
-    title: "godzilla milkshake",
-    category: "shakes",
-    price: 6.99,
-    img: "./images/item-3.jpeg",
-    desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
-  },
-  {
-    id: 4,
-    title: "country delight",
-    category: "breakfast",
-    price: 20.99,
-    img: "./images/item-4.jpeg",
-    desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
-  },
-  {
-    id: 5,
-    title: "egg attack",
-    category: "lunch",
-    price: 22.99,
-    img: "./images/item-5.jpeg",
-    desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
-  },
-  {
-    id: 6,
-    title: "oreo dream",
-    category: "shakes",
-    price: 18.99,
-    img: "./images/item-6.jpeg",
-    desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
-  },
-  {
-    id: 7,
-    title: "bacon overflow",
-    category: "breakfast",
-    price: 8.99,
-    img: "./images/item-7.jpeg",
-    desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
-  },
-  {
-    id: 8,
-    title: "american classic",
-    category: "lunch",
-    price: 12.99,
-    img: "./images/item-8.jpeg",
-    desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
-  },
-  {
-    id: 9,
-    title: "quarantine buddy",
-    category: "shakes",
-    price: 16.99,
-    img: "./images/item-9.jpeg",
-    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    title: "Animated Navbar",
+    live: "https://krishandeep.com/animated-navbar",
+    github: "https://github.com/krishandeep7/animated-navbar",
+    img: "img/animated-navbar-img.png",
+    description:
+      "It is a responsive navigation bar with advanced CSS animation and animated menu icon.",
   },
 ];
-// get parent element
-const sectionCenter = document.querySelector(".section-center");
-const btnContainer = document.querySelector(".btn-container");
-const filterBtns = document.querySelectorAll(".filter-btn");
-// display all items when page loads
-window.addEventListener("DOMContentLoaded", function () {
-  diplayMenuItems(menu);
-});
 
-filterBtns.forEach(function (btn) {
-  btn.addEventListener("click", function (e) {
-    // console.log(e.currentTarget.dataset);
-    const category = e.currentTarget.dataset.id;
-    const menuCategory = menu.filter(function (menuItem) {
-      // console.log(menuItem.category);
-      if (menuItem.category === category) {
-        return menuItem;
-      }
-    });
-    if (category === "all") {
-      diplayMenuItems(menu);
-    } else {
-      diplayMenuItems(menuCategory);
-    }
+const showProjects = document.querySelector("#show-projects");
+const seeMoreBtn = document.querySelector("#see-more");
+const btnText = document.querySelector("#see-more .text");
+
+seeMoreBtn.addEventListener("click", function () {
+  let display = projects.map(function (project) {
+    return ` <div class="project flex align-items-center">
+    <div class="project-text-box" data-aos="fade-right">
+      <h3 class="title">${project.title}</h3>
+      <p class="description">${project.description}</p>
+      <div class="links flex align-items-center">
+        <a
+          href=${project.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn"
+          title="See Live"
+        >
+          <div>
+            <span class="bg"></span>
+            <span class="base"></span>
+            <span class="text">
+              See Live <i class="fas fa-external-link-alt"></i>
+            </span>
+          </div>
+        </a>
+        <a
+          href=${project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+          title="Source Code"
+        >
+          <div>
+            <span class="text">
+              Source Code <i class="fab fa-github"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div
+      class="project-img-box"
+      data-aos="fade-left"
+    >
+      <a
+        class="flex align-items-center justify-content-center"
+        href=${project.live}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          class="project-img"
+          width="536"
+          height="313"
+          src=${project.img}
+          alt=${project.title}
+        />
+      </a>
+    </div>
+  </div>`;
   });
+  display = display.join("");
+
+  if (btnText.innerText === "See More!") {
+    btnText.innerText = "Show Less!";
+    showProjects.innerHTML = display;
+    showProjects.classList.add("margin-top");
+  } else {
+    btnText.innerText = "See More!";
+    showProjects.innerHTML = "";
+    showProjects.classList.remove("margin-top");
+  }
 });
-
-function diplayMenuItems(menuItems) {
-  let displayMenu = menuItems.map(function (item) {
-    // console.log(item);
-
-    return `<article class="menu-item">
-            <img src=${item.img} alt=${item.title} class="photo" />
-            <div class="item-info">
-              <header>
-                <h4>${item.title}</h4>
-                <h4 class="price">$${item.price}</h4>
-              </header>
-              <p class="item-text">
-                ${item.desc}
-              </p>
-            </div>
-          </article>`;
-  });
-  displayMenu = displayMenu.join("");
-  // console.log(displayMenu);
-
-  sectionCenter.innerHTML = displayMenu;
-}

@@ -1,41 +1,67 @@
-// Selecting DOM
-
-var mykey = config.MY_KEY;
-var secretkey = config.SECRET_KEY;
-
-console.log(mykey);
-console.log(secretkey);
-
-const html = document.documentElement;
-
-const preLoader = document.querySelector(".pre-loader");
-const header = document.querySelector(".header");
-const backToTop = document.querySelector(".back-to-top");
-
-const hamburger = document.querySelector(".hamburger");
-const navList = document.querySelector(".nav-list");
-
-const navLink = document.querySelectorAll(".nav-link");
-const section = document.querySelectorAll("section");
-
-// To hide PRE-LOADER
-window.addEventListener("load", function () {
-  preLoader.style.display = "none";
+///////////////////////////////////////////////////////////
+// Animate on scroll
+AOS.init({
+  duration: 1000,
+  once: true,
 });
 
-// To hide HEADER on scroll
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    header.style.top = "0";
-  } else {
-    header.style.top = "-10rem";
-  }
-  prevScrollpos = currentScrollPos;
-};
+///////////////////////////////////////////////////////////
+// Selecting DOM
+const header = document.querySelector(".header");
+const hamburger = document.querySelector(".hamburger");
+const backToTop = document.querySelector(".back-to-top");
+const navLink = document.querySelectorAll(".main-nav-link");
+const section = document.querySelectorAll("section");
+const allLinks = document.querySelectorAll(".link:link");
+const form = document.querySelector("#form");
+const fname = document.querySelector("#name");
+const email = document.querySelector("#email");
+const subject = document.querySelector("#subject");
+const message = document.querySelector("#message");
 
-// To change HEADER background color and BACK-TO-TOP link visible on scrolling
+///////////////////////////////////////////////////////////
+// Make preloader work
+let preloader = document.querySelector("#preloader");
+if (preloader) {
+  window.addEventListener("load", function () {
+    preloader.remove();
+  });
+}
+
+///////////////////////////////////////////////////////////
+// Make mobile navigation work
+hamburger.addEventListener("click", function () {
+  header.classList.toggle("nav-open");
+});
+
+///////////////////////////////////////////////////////////
+// Smooth scrolling animation
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    // Scroll back to top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+    // Scroll to other links
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Close mobile naviagtion
+    if (link.classList.contains("main-nav-link"))
+      header.classList.toggle("nav-open");
+  });
+});
+
+///////////////////////////////////////////////////////////
+// Change navigation background color and back-to-top link visible on scrolling
 window.addEventListener("scroll", function () {
   if (window.scrollY > 100) {
     header.classList.add("header-scroll");
@@ -46,7 +72,8 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// To active NAV LINKS on scroll
+///////////////////////////////////////////////////////////
+// To active navigation link on scroll
 window.addEventListener("scroll", function () {
   let length = section.length;
   while (--length && window.scrollY + 97 < section[length].offsetTop) {}
@@ -54,19 +81,57 @@ window.addEventListener("scroll", function () {
   navLink[length].classList.add("active");
 });
 
-// To make toggle hamburger menu
-hamburger.addEventListener("click", function () {
-  navList.classList.toggle("toggle-nav");
-  this.classList.toggle("is-active");
+///////////////////////////////////////////////////////////
+// Form Validation
+function checkValidity(inputArr) {
+  inputArr.forEach(function (input) {
+    input.addEventListener("input", function (e) {
+      if (input.validity.valid) {
+        input.classList.add("valid");
+        input.classList.remove("invalid");
+      } else {
+        if (e.target.value.length === 0) {
+          input.classList.remove("valid");
+          input.classList.add("invalid");
+        } else {
+          input.classList.remove("valid");
+          input.classList.add("invalid");
+        }
+      }
+    });
+  });
+}
 
-  html.classList.toggle("overflow-hidden");
+checkValidity([fname, email, subject, message]);
+
+// Form Event Listener
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Use HTML constraint API to check form validity
+  let isValid = form.checkValidity();
+
+  // Submit & Reset Form if Valid
+  if (isValid) {
+    form.submit();
+  }
 });
 
-navList.addEventListener("click", function () {
-  this.classList.toggle("toggle-nav");
-  hamburger.classList.toggle("is-active");
-});
+///////////////////////////////////////////////////////////
+// Fixing flexbox gap property missing in some Safari versions
+// function checkFlexGap() {
+//   var flex = document.createElement("div");
+//   flex.style.display = "flex";
+//   flex.style.flexDirection = "column";
+//   flex.style.rowGap = "1px";
 
-// To get current year
-let year = new Date().getFullYear();
-document.querySelector(".year").innerHTML = year;
+//   flex.appendChild(document.createElement("div"));
+//   flex.appendChild(document.createElement("div"));
+
+//   document.body.appendChild(flex);
+//   var isSupported = flex.scrollHeight === 1;
+//   flex.parentNode.removeChild(flex);
+
+//   if (!isSupported) document.body.classList.add("no-flexbox-gap");
+// }
+// checkFlexGap();
