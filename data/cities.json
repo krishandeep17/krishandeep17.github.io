@@ -1,0 +1,38 @@
+[
+  {
+    "cityName": "Agra",
+    "country": "India",
+    "emoji": "🇮🇳",
+    "date": "2023-08-31T15:59:59.138Z",
+    "notes": "Unique culture of its own.",
+    "position": {
+      "lat": 27.173891,
+      "lng": 78.042068
+    },
+    "id": 73930385
+  },
+  {
+    "cityName": "Rome",
+    "country": "Italy",
+    "emoji": "🇮🇹",
+    "date": "2023-07-15T08:22:53.976Z",
+    "notes": "Most beautiful city, I've ever visited.",
+    "position": {
+      "lat": 41.890251,
+      "lng": 12.492373
+    },
+    "id": 17806751
+  },
+  {
+    "cityName": "Rio de Janeiro",
+    "country": "Brazil",
+    "emoji": "🇧🇷",
+    "date": "2023-02-12T09:24:11.863Z",
+    "notes": "Amazing 😃",
+    "position": {
+      "lat": -22.951,
+      "lng": -43.2065
+    },
+    "id": 98443197
+  }
+]
